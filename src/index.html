@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <title>Transactions Visualization</title>
+</head>
+
+<body class="bg-dark" data-theme="dark">
+    <main>
+        <section class="py-4">
+            <div class="container d-flex flex-column">
+                <div class="options py-2">
+                    <button class="btn btn-light">
+                        <div class="fa-solid fa-moon"></div>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="graph-container">
+                            <canvas id="transaction-chart">Your browser does not support the canvas element.</canvas>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="filter d-flex flex-wrap flex-sm-nowrap align-items-center gap-2 py-2">
+                            <select class="custom-select p-2 rounded flex-grow-1">
+                                <option value="0" selected>Filter By:</option>
+                                <option value="1">Customer Name</option>
+                                <option value="2">Transaction Amount &gt;</option>
+                                <option value="3">Transaction Amount &lt;</option>
+                              </select>
+                              <input type="text" class="form-control flex-grow-1" disabled>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Transaction Date</th>
+                                        <th scope="col">Transaction Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-light text-black p-4 text-uppercase">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="m-0">By <a target="_blank" href="https://www.linkedin.com/in/mosab-elkalyouby-4690a6263/" class="text-decoration-none"><strong class="text-info">@Mosab_Elkalyouby</strong></a></p>
+                    <div class="socials">
+                        <a target="_blank" class="text-decoration-none" href="https://www.facebook.com/mosab.elkalyouby888">
+                            <button class="btn btn-primary">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
+                        </a>
+                        <a target="_blank" class="text-decoration-none" href="https://www.linkedin.com/in/mosab-elkalyouby-4690a6263/">
+                            <button class="btn btn-info text-white">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

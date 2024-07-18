@@ -1,0 +1,15 @@
+* {
+    transition: background-color 0.5s ease !important;
+}
+
+table {
+    min-height: 50vh !important;
+}
+
+table tr td {
+    cursor: pointer;
+}
+
+.graph-container {
+    height: 55vh;
+}
